@@ -1,95 +1,103 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        message: '',
-      });
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
+  });
 
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault(); 
-        console.log(formData);
-      };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
-      
-        const handleDownload = () => {
-          const pdfUrl = '../ShubhamPandey_Resume.pdf';
-          const link = document.createElement('a');
-          link.href = pdfUrl;
-          link.download = 'downloaded-file.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        };
-      
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    // Display alert message
+    alert('Form submitted successfully!');
+  };
+
+  const handleDownload = () => {
+    const pdfUrl = '../ShubhamPandey_Resume.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'downloaded-file.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className='contact'>
-
       <form onSubmit={handleSubmit}>
-      <div className='inputs'>
-        First Name
-        <input
-        type="text"
-        id="firstName"
-        name="firstName"
-        value={formData.firstName}
-        onChange={handleChange}
-        required/><br/>
+        <div className='inputs'>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder='Your First Name'
+            value={formData.firstName}
+            onChange={handleChange}
+            required
+          />
 
-        Last Name
-      <input 
-      type='text' 
-      id='lastName'
-      name='lastName'
-      value={formData.lastName} 
-      onChange={handleChange} 
-      required/><br/>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type='text'
+            id='lastName'
+            name='lastName'
+            placeholder='Your Last Name'
+            value={formData.lastName}
+            onChange={handleChange}
+            required
+          />
 
-        E-mail
-      <input 
-      type='text' 
-      id='email' 
-      name='email'
-      value={formData.email} 
-      onChange={handleChange} 
-      required/><br/>
+          <label htmlFor="email">E-Mail:</label>
+          <input
+            type='email'
+            id='email'
+            name='email'
+            placeholder='Type your e-mail here'
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-        PhoneNumber
-      <input 
-      type='tel' 
-      id='phoneNumber' 
-      name='phoneNumber'
-      value={formData.phoneNumber} 
-      onChange={handleChange} 
-      required/><br/>
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            type='tel'
+            id='phoneNumber'
+            name='phoneNumber'
+            placeholder='Type your Phone NO. here'
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            required
+          />
 
-       Message
-      <input 
-      type='text' 
-      id='message' 
-      name='message'
-      value={formData.message} 
-      onChange={handleChange} 
-      required/><br/>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id='message'
+            name='message'
+            placeholder='Type your message here'
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      </div>
-
-      <div className='buttons'>
-      <button type='button' onClick={handleDownload}> Download Resume </button>
-      <button type='submit'>Submit</button>
-      </div>
+        <div className='buttons'>
+          <button type='button' onClick={handleDownload}>Download Resume</button>
+          <button type='submit'>Submit</button>
+        </div>
       </form>
-
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

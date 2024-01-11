@@ -88,8 +88,8 @@
 
   .portfolio{
     position: relative;
-    width: 55%;
-    left: 25%;
+    width: 80%;
+    left: 10%;
     top: 4rem;
   }
 
@@ -116,58 +116,89 @@
     background-color: #333; 
   }
 
+ //(projects)
+
+  .projecthead {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .portfoliosection {
+    text-align: center;
+    margin: 3rem;
+  }
+  
+  .portfoliosection .project {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 2rem;
+  
+    img {
+      max-width: 100%;
+      margin-right: 20px;
+      height: 15rem;
+      width: 45rem;
+      position: relative;
+      top: 2rem;
+    }
+  
+    .project-info {
+      width: 50rem;
+      padding: 8px;
+    }
+  }
+  
+
   //CONTACT
 
   .contact {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-  position: relative;
-  top: 1rem;
-  font-size: 1.3rem;
-
+    position: relative;
+    top: 4rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3b3b3b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
   .inputs {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
-
-    input {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 10px;
-      border: 1px solid #666565;
-      border-radius: 4px;
-      background-color: #424141;
-      color: #c0bcbc;
-      font-size: medium;
-
-      &:focus {
-        outline: none;
-        border-color: #007bff;
-      }
+  
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+  
+    input,
+    textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      font-size: 16px;
     }
   }
-
+  
   .buttons {
     display: flex;
     justify-content: space-between;
-
+  
     button {
       padding: 10px 20px;
-      cursor: pointer;
-      border: 1px solid #007bff;
-      border-radius: 4px;
-      background-color: #007bff;
-      color: #fff;
       font-size: 16px;
-
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
       &:hover {
-        background-color: #0056b3;
-        border-color: #0056b3;
-      }
-
-      &:first-child {
-        margin-right: 10px;
+        background-color: #2980b9;
       }
     }
   }
-}
+  
