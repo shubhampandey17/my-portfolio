@@ -64,7 +64,7 @@ const Portfolio = () => {
           <div className="project-info">
             <h3>Project 3</h3>
             <p>Description : Developed a personal portfolio using React and Sass to showcase skills, projects, and experiences. The responsive design incorporates a project showcase with detailed descriptions, a visually appealing skills section, and a contact form for easy communication.</p>
-            <p>Technologies: React, SASS / SCSS </p>
+            <p>Technologies: HTML, CSS, JavaScript </p>
           </div>
         </div>
 
