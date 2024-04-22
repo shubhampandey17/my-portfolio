@@ -21,9 +21,11 @@ const Portfolio = () => {
         <p className='skill'>XML</p>
         <p className='skill'>CSS</p>
         <p className='skill'>SASS / SCSS</p>
+        <p className='skill'>Tailwind CSS</p>
         <p className='skill'>Material UI</p>
         <p className='skill'>JavaScript</p>
         <p className='skill'>React js</p>
+        <p className='skill'>Next js</p>
         <p className='skill'>TypeScript</p>
         <p className='skill'>Git & Github</p>
         <p className='skill'>Agile Methodology</p>

@@ -17,8 +17,7 @@ const About = () => {
 
       <div className='about'>
         <h1>Hello my name is <b>Shubham Pandey</b>.</h1>
-        <h2>I am an expertise in front end development
-            React and javascript.</h2>
+        <h2>I have expertise in front end development</h2>
         <h3>Checkout my projects on the portfolio page
             U can contact me with</h3>
           <span className='gmail'> shubhamprakash170@gmail.com</span> 
